@@ -1,5 +1,6 @@
 ---
-
+import "../styles/reset.css";
+import "../styles/global.css";
 ---
 
 <html lang="en">
@@ -8,9 +9,36 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<header>
+			<nav>
+				<a href=""><h1>HOME</h1></a>
+
+				<ul class="nav_list">
+					<li>about</li>
+					<li>
+						<div class="dropdown">
+							<button class="dropbtn">More</button>
+							<div class="dropdown-content">
+								<a href="#">My work</a>
+								<a href="#">Blog</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</nav>
+			<section class="header_content container">
+				<h2 class="header_title">
+					I am <span class="header_span">Keanu</span>, and I <span
+						class="header_span">design</span
+					> and <span class="header_span">develop</span> stuff...
+				</h2>
+			</section>
+		</header>
+
+		<script src="/public/js/script.js" ;></script>
 	</body>
 </html>
