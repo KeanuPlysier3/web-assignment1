@@ -1,6 +1,7 @@
 ---
 import "../styles/reset.css";
 import "../styles/global.css";
+import Nav from "../components/nav.astro";
 ---
 
 <html lang="en">
@@ -14,22 +15,7 @@ import "../styles/global.css";
 	</head>
 	<body>
 		<header>
-			<nav>
-				<a href=""><h1>HOME</h1></a>
-
-				<ul class="nav_list">
-					<li>about</li>
-					<li>
-						<div class="dropdown">
-							<button class="dropbtn">More</button>
-							<div class="dropdown-content">
-								<a href="#">My work</a>
-								<a href="#">Blog</a>
-							</div>
-						</div>
-					</li>
-				</ul>
-			</nav>
+			<Nav />
 			<section class="header_content container">
 				<h2 class="header_title">
 					I am <span class="header_span">Keanu</span>, and I <span
@@ -38,7 +24,61 @@ import "../styles/global.css";
 				</h2>
 			</section>
 		</header>
+		<main>
+			<section class="working_on container">
+				<h2 class="working_on_title">Currently Working on</h2>
 
-		<script src="/public/js/script.js" ;></script>
+				<article class="project">
+					<h3 class="project_title">Thrive campaign</h3>
+					<div class="project_content">
+						<p class="project_description">
+							The assignment is to design a campaign website for
+							Thrive, a beer brand promoted as healthy,
+							highlighting its benefits and engaging users with a
+							modern, appealing design.
+						</p>
+
+						<p class="project_vertical">design</p>
+					</div>
+				</article>
+
+				<article class="project">
+					<h3 class="project_title">EXPERIENCE SITE</h3>
+					<div class="project_content">
+						<p class="project_description">
+							I am currently working on an other website that
+							brings the excitement and experience of basketball
+							to life. I focus on different moments in history of
+							the nba, and try to make it as interactive as
+							possible.
+						</p>
+
+						<p class="project_vertical">develop</p>
+					</div>
+				</article>
+
+				<article class="project">
+					<h3 class="project_title">PORTFOLIO SITE</h3>
+					<div class="project_content">
+						<p class="project_description">
+							The website you are currently viewing, is my
+							portolio website. That means that I will always be
+							updating and improving it as I learn new skills and
+							techniques in web development.
+						</p>
+
+						<p class="project_vertical">develop</p>
+					</div>
+				</article>
+			</section>
+			<section class="contact container">
+				<h2>Contact me</h2>
+			</section>
+		</main>
+
+		<script src="/js/gsap.min.js" is:inline></script>
+		<script src="/js/ScrollTrigger.min.js" is:inline></script>
+		<script src="/js/SplitText.min.js" is:inline></script>
+		<script src="/js/script.js" is:inline></script>
 	</body>
 </html>
