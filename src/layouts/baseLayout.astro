@@ -1,0 +1,23 @@
+---
+import "../styles/reset.css";
+import "../styles/global.css";
+const { pageTitle } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{pageTitle ? pageTitle + " | My Site" : "My Site"}</title>
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    </head>
+    <body>
+        <slot />
+
+        <script src="/js/gsap.min.js" is:inline></script>
+        <script src="/js/ScrollTrigger.min.js" is:inline></script>
+        <script src="/js/SplitText.min.js" is:inline></script>
+        <script src="/js/script.js" is:inline></script>
+    </body>
+</html>
