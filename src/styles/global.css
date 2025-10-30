@@ -353,12 +353,116 @@ a {
         font-size: var(--font-size-xxl);
         color: var(--color-orange);
     }
+
+    /* ABOUT PAGE */
+
+    .about {
+        padding: var(--space-2) 0;
+
+    }
+
+    .about_title {
+        font-family: 'title';
+        font-size: var(--font-size-xxxl);
+        color: var(--color-yellow);
+        text-transform: uppercase;
+        padding-bottom: var(--space-1);
+        text-align: center;
+    }
+
+    .about_item {
+
+        padding: var(--space-2) var(--space-1);
+        border: solid var(--color-yellow) 2px;
+        color: var(--color-yellow);
+        font-family: 'body-light';
+        font-size: var(--font-size-xl);
+    }
+
+    .about_span {
+        color: var(--color-yellow);
+        font-family: 'title';
+        font-size: var(--font-size-xxl)
+    }
+
+    .skills {
+
+        background-color: var(--color-blue);
+        padding-bottom: var(--space-2)
+    }
+
+    .skills_title {
+        font-family: 'title';
+        font-size: var(--font-size-xxxl);
+        color: var(--color-yellow);
+        text-transform: uppercase;
+        padding-top: var(--space-1);
+        padding-bottom: var(--space-1);
+        text-align: center;
+    }
+
+    .skills_list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-1);
+
+    }
+
+    .skills_item {
+        background-color: var(--color-yellow);
+
+        color: var(--color-blue);
+        font-family: 'body';
+        text-align: center;
+        font-size: var(--font-size-xxl);
+        text-transform: uppercase;
+
+        /* Stronger shadow */
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+        border-radius: 6px;
+
+
+
+    }
+
+    .skills_link {
+        padding: var(--space-5) var(--space-0-50);
+        display: block;
+        height: 100%;
+        width: 100%;
+    }
+
+    .skill_title {
+        font-family: 'title';
+        font-size: var(--font-size-xxxxl);
+        color: var(--color-yellow);
+        padding-top: var(--space-1);
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .skill_description {
+        font-family: 'body-light';
+        font-size: var(--font-size-xl);
+        color: var(--color-yellow);
+        padding: var(--space-1) 0 var(--space-2) 0;
+        text-align: center;
+    }
+
+    .skill_content {
+        background-color: var(--color-blue);
+        padding: var(--space-1);
+        border-radius: 2rem;
+        font-family: 'body-light';
+        color: var(--color-yellow);
+        font-size: var(--font-size-l)
+    }
 }
 
 
 
 
-
+/*
 @media screen and (min-width: 500px) and (max-width:699px) {
     .container::before {
         content: "min-width: 500px";
@@ -387,3 +491,4 @@ a {
         content: "min-width: 900px";
     }
 }
+    */
