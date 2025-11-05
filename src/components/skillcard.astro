@@ -1,0 +1,11 @@
+---
+const { skill } = Astro.props;
+console.log(skill);
+console.log(skill);
+---
+
+<li class="skills_item">
+    <a class="skills_link" href={`/skills/${skill.id}`}>
+        {skill.data.title}
+    </a>
+</li>

@@ -1,10 +1,9 @@
 ---
+import { getCollection } from "astro:content";
 import Nav from "../components/nav.astro";
 import BaseLayout from "../layouts/baseLayout.astro";
-
-const allSkills = Object.values(
-    import.meta.glob("./skills/*.md", { eager: true }),
-);
+import Skill from "../components/skillcard.astro";
+const skills = await getCollection("skills");
 ---
 
 <BaseLayout>
@@ -46,15 +45,7 @@ const allSkills = Object.values(
             </h2>
 
             <ul class="skills_list">
-                {
-                    allSkills.map((skill: any) => (
-                        <li class="skills_item">
-                            <a class="skills_link" href={skill.url}>
-                                {skill.frontmatter.title}
-                            </a>
-                        </li>
-                    ))
-                }
+                {skills.map((skill: any) => <Skill skill={skill} />)}
             </ul>
         </section>
     </main>

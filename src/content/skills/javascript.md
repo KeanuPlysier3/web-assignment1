@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/baseLayoutMD.astro
 title: "JavaScript"
 description: "The story of making my websites interactive with JavaScript."
 ---

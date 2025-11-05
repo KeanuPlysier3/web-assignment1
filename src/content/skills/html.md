@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/baseLayoutMD.astro
 title: "HTML"
 description: "My journey learning HTML and building web pages."
 ---

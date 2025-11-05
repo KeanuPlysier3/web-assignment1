@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/baseLayoutMD.astro
 title: "Figma"
 description: "My experience designing interfaces and prototypes with Figma."
 ---
