@@ -1,0 +1,11 @@
+---
+import { getCollection } from "astro:content";
+const work = await getCollection("work");
+import Workcard from "../components/workcard.astro";
+---
+
+<section>
+    <ul>
+        {work.map((project) => <Workcard project={project} />)}
+    </ul>
+</section>

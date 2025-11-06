@@ -1,0 +1,15 @@
+---
+import { getCollection } from "astro:content";
+const skills = await getCollection("skills");
+import Skill from "../components/skillcard.astro";
+---
+
+<section class="skills container">
+    <h2 class="skills_title">
+        <span class="title_span">my</span> skills
+    </h2>
+
+    <ul class="skills_list">
+        {skills.map((skill: any) => <Skill skill={skill} />)}
+    </ul>
+</section>
