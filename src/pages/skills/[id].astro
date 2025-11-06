@@ -1,0 +1,25 @@
+---
+import Layout from "../../layouts/baseLayout-skills.astro";
+import { render } from "astro:content";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+    const skills = await getCollection("skills");
+
+    const paths = skills.map((skill) => ({
+        params: { id: skill.id.toString() },
+        props: {
+            skill: skill,
+        },
+    }));
+
+    return paths;
+}
+
+const { skill } = Astro.props;
+const { Content } = await render(skill);
+---
+
+<Layout skill={skill}>
+    <Content />
+</Layout>

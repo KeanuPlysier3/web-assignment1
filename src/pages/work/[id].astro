@@ -1,0 +1,25 @@
+---
+import Layout from "../../layouts/baseLayout-work.astro";
+import { render } from "astro:content";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+    const work = await getCollection("work");
+
+    const paths = work.map((work) => ({
+        params: { id: work.id.toString() },
+        props: {
+            work: work,
+        },
+    }));
+
+    return paths;
+}
+
+const { work } = Astro.props;
+const { Content } = await render(work);
+---
+
+<Layout work={work}>
+    <Content />
+</Layout>

@@ -106,7 +106,9 @@ a {
 
 
 
-@media screen and (min-width: 300px) and (max-width: 499px) {
+@media screen and (min-width: 300px) {
+
+    /*and (max-width: 499px) */
     .container {
         padding: 0 var(--space-1) 0 var(--space-1);
     }
@@ -405,6 +407,7 @@ a {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: var(--space-1);
+        margin-bottom: var(--space-5);
 
     }
 
@@ -456,6 +459,16 @@ a {
         font-family: 'body-light';
         color: var(--color-yellow);
         font-size: var(--font-size-l)
+    }
+
+    .work_link {
+        padding: var(--space-1);
+        border-radius: 2rem;
+        color: var(--color-yellow);
+        font-family: 'body-light';
+        background-color: var(--color-blue);
+        margin-top: var(--space-2);
+        text-decoration: underline;
     }
 }
 

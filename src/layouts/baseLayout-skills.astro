@@ -3,16 +3,16 @@ import "../styles/reset.css";
 import "../styles/global.css";
 import Nav from "../components/nav.astro";
 import BaseLayout from "./baseLayout.astro";
-const { frontmatter } = Astro.props;
+const { skill } = Astro.props;
 ---
 
-<BaseLayout pageTitle={frontmatter.title}>
+<BaseLayout pageTitle={skill.data.title}>
     <header>
         <Nav />
     </header>
     <section class="skill container">
-        <h2 class="skill_title">{frontmatter.title}</h2>
-        <p class="skill_description">{frontmatter.description}</p>
+        <h2 class="skill_title">{skill.data.title}</h2>
+        <p class="skill_description">{skill.data.description}</p>
 
         <div class="skill_content">
             <slot />

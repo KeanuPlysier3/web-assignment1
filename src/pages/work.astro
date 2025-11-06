@@ -1,0 +1,12 @@
+---
+import Nav from "../components/nav.astro";
+import Base from "../layouts/baseLayout.astro";
+import { getCollection } from "astro:content";
+import Worklist from "../components/work.astro";
+const work = await getCollection("work");
+---
+
+<Base>
+    <Nav />
+    <Worklist />
+</Base>

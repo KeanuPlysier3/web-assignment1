@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/baseLayoutMD.astro
 title: "CSS"
 description: "How I learned to style websites and bring designs to life."
 ---

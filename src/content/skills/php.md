@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/baseLayoutMD.astro
 title: "PHP"
 description: "How I learned server-side programming with PHP."
 ---
