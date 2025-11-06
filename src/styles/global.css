@@ -458,6 +458,16 @@ a {
         color: var(--color-yellow);
         font-size: var(--font-size-l)
     }
+
+    .work_link {
+        padding: var(--space-1);
+        border-radius: 2rem;
+        color: var(--color-yellow);
+        font-family: 'body-light';
+        background-color: var(--color-blue);
+        margin-top: var(--space-2);
+        text-decoration: underline;
+    }
 }
 
 

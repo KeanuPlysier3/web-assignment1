@@ -1,0 +1,17 @@
+---
+import Nav from "../components/nav.astro";
+import Base from "../layouts/baseLayout.astro";
+import { getCollection } from "astro:content";
+import Workcard from "../components/workcard.astro";
+const work = await getCollection("work");
+---
+
+<Base>
+    <Nav />
+
+    <section>
+        <ul>
+            {work.map((project) => <Workcard project={project} />)}
+        </ul>
+    </section>
+</Base>

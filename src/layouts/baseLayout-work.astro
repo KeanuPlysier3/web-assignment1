@@ -1,0 +1,25 @@
+---
+import "../styles/reset.css";
+import "../styles/global.css";
+import Nav from "../components/nav.astro";
+import BaseLayout from "./baseLayout.astro";
+const { work } = Astro.props;
+---
+
+<BaseLayout pageTitle={work.data.title}>
+    <header>
+        <Nav />
+    </header>
+    <section class="skill container">
+        <h2 class="skill_title">{work.data.title}</h2>
+        <p class="skill_description">{work.data.description}</p>
+
+        <div class="skill_content">
+            <slot />
+        </div>
+
+        <div class="work_link">
+            <a href={work.data.url}>{work.data.url}</a>
+        </div>
+    </section>
+</BaseLayout>

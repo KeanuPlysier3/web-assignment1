@@ -1,0 +1,10 @@
+---
+const { project } = Astro.props;
+console.log(project);
+---
+
+<li class="skills_item">
+    <a class="skills_link" href={`/work/${project.id}`}>
+        {project.data.title}
+    </a>
+</li>
