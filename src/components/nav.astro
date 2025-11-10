@@ -2,15 +2,36 @@
     <a href="/"><h1>Keanu</h1></a>
 
     <ul class="nav_list">
-        <li><a href="/about">about</a></li>
+        <li><a class="hidden" href="/about">About</a></li>
+        <li><a class="hidden" href="/work">My work</a></li>
         <li>
-            <div class="dropdown">
+            <div class="dropdown visible">
                 <button class="dropbtn">More &#9662;</button>
                 <div class="dropdown-content">
                     <a href="/work">My work</a>
-                    <a href="#">Blog</a>
+                    <a href="/about">About</a>
                 </div>
             </div>
         </li>
     </ul>
 </nav>
+
+<style is:global>
+    @media screen and (min-width: 300px) and (max-width: 1199px) {
+        .visible {
+            display: block;
+        }
+        .hidden {
+            display: none;
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        .visible {
+            display: none;
+        }
+        .hidden {
+            display: block;
+        }
+    }
+</style>
