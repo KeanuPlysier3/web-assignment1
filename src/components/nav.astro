@@ -29,8 +29,8 @@ import { base } from "astro:config/server";
 
 <style is:global>
     @media screen and (min-width: 300px) and (max-width: 1199px) {
-        .visible {
-            display: block;
+        .dropdown.visible {
+            display: inline-block;
         }
         .hidden {
             display: none;
@@ -38,7 +38,7 @@ import { base } from "astro:config/server";
     }
 
     @media screen and (min-width: 1200px) {
-        .visible {
+        .dropdown.visible {
             display: none;
         }
         .hidden {
