@@ -10,14 +10,25 @@ const { pageTitle } = Astro.props;
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>{pageTitle ? pageTitle + " | My Site" : "My Site"}</title>
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     </head>
     <body>
         <slot />
 
-        <script src="/js/gsap.min.js" is:inline></script>
-        <script src="/js/ScrollTrigger.min.js" is:inline></script>
-        <script src="/js/SplitText.min.js" is:inline></script>
-        <script src="/js/script.js" is:inline></script>
+        <!-- GSAP from CDN (safe for GitHub Pages) -->
+        <script
+            is:inline
+            src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"
+        ></script>
+        <script
+            is:inline
+            src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"
+        ></script>
+        <script
+            is:inline
+            src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"
+        ></script>
+
+        <!-- Your local script (needs BASE_URL) -->
+        <script is:inline src="/web-assignment1/js/script.js"></script>
     </body>
 </html>
