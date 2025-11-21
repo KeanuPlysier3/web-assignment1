@@ -1,12 +1,11 @@
 ---
 const { project } = Astro.props;
-console.log(project);
 ---
 
 <li class="skills_item">
     <a
         class="skills_link"
-        href={`${import.meta.env.BASE_URL}skills/${project.id}`}
+        href={`${import.meta.env.BASE_URL}work/${project.id}`}
     >
         {project.data.title}
     </a>
