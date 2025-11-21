@@ -3,11 +3,18 @@ import { base } from "astro:config/server";
 ---
 
 <nav>
-    <a href="/"><h1>Keanu</h1></a>
+    <a href=`${import.meta.env.BASE_URL}`><h1>Keanu</h1></a>
 
     <ul class="nav_list">
-        <li><a class="hidden" href="/about">About</a></li>
-        <li><a class="hidden" href="/work">My work</a></li>
+        <li>
+            <a class="hidden" href={`${import.meta.env.BASE_URL}work`}
+                >My work</a
+            >
+        </li>
+        <li>
+            <a class="hidden" href={`${import.meta.env.BASE_URL}about`}>About</a
+            >
+        </li>
         <li>
             <div class="dropdown visible">
                 <button class="dropbtn">More &#9662;</button>
