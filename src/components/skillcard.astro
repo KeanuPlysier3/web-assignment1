@@ -4,7 +4,10 @@ console.log(skill);
 ---
 
 <li class="skills_item">
-    <a class="skills_link" href=`${import.meta.env.BASE_URL}skills/${skill.id}`>
+    <a
+        class="skills_link"
+        href={`${import.meta.env.BASE_URL}skills/${skill.id}`}
+    >
         {skill.data.title}
     </a>
 </li>
